@@ -4,7 +4,7 @@ const Table = (props) => {
 
   const renderPlates = (array) => {
     return array.map((x, index) => {
-      return <div className="empty-plate" style={{ top: -7 * index }}/>
+      return <div key={index} className="empty-plate" style={{ top: -7 * index }}/>
     })
   }
 
@@ -15,8 +15,7 @@ const Table = (props) => {
       </h1>
       <div className="table">
         <div className="stack">
-          {renderPlates(props.purchasedSushi)
-          }
+          {renderPlates(props.eatenSushi)}
         </div>
       </div>
     </Fragment>
